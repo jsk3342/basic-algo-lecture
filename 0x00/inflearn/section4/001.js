@@ -1,14 +1,13 @@
-function solution(s) {
-  let answer = "Yes";
-  let 소문자 = s.toLowerCase();
-  for (let i = 0; i < s.length; i++) {
-    if (소문자[i] !== 소문자[s.length - 1 - i]) {
-      answer = "No";
-    }
+function solution(n, arr) {
+  let answer;
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let 합 = arr[i].split("").reduce((a, b) => a + b, 0);
+    console.log(합);
   }
 
   return answer;
 }
 
-let str = "goooG";
-console.log(solution(str));
+let arr = [128, 460, 603, 40, 521, 137, 123];
+console.log(solution(7, arr));
