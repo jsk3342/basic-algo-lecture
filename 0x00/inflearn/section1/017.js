@@ -1,10 +1,6 @@
 function solution(s) {
-  let answer = [];
-  for (let x of s) {
-    if (!answer.includes(x)) {
-      answer.push(x);
-    }
-  }
+  let answer;
+  answer = s.filter((e, i) => (s.indexOf(e) === i ? true : false));
   return answer;
 }
 let str = ["good", "time", "good", "time", "student"];
