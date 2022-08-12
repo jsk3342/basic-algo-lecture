@@ -1,9 +1,9 @@
 function solution(s) {
-  let answer = "Yes";
-  let 소문자 = s.toLowerCase();
+  var answer = "Yes";
+  var ss = s.toLowerCase();
   for (let i = 0; i < s.length; i++) {
-    if (소문자[i] !== 소문자[s.length - 1 - i]) {
-      answer = "No";
+    if (ss[i] !== ss[s.length - 1 - i]) {
+      return "No";
     }
   }
 
