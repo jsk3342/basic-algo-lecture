@@ -1,61 +1,19 @@
-function solution(n, arr) {
-  let answer;
-  let max = 0;
-  for (let x of arr) {
-    let sum = 0;
-    let tmp = x;
-    while (tmp) {
-      sum += tmp % 10;
-      tmp = Math.floor(tmp / 10);
-    }
-    if (sum > max) max = sum;
+function solution(arr1, arr2) {
+  let answer = [];
+  let m = arr1.length;
+  let n = arr2.length;
+  let p1 = (p2 = 0);
+  while (p1 < m && p2 < n) {
+    if (arr1[p1] < arr2[p2]) {
+      answer.push(arr1[p1++]);
+    } else answer.push(arr2[p2++]);
   }
+  while (p1 < m) answer.push(arr1[p1++]);
+  while (p2 < n) answer.push(arr2[p2++]);
+
   return answer;
 }
 
-let arr = [128, 460, 603, 40, 521, 137, 123];
-console.log(solution(7, arr));
-
-// function solution(n, arr) {
-//   let answer;
-//   let max = Number.MIN_SAFE_INTEGER;
-//   for (let x of arr) {
-//     let sum = 0,
-//       tmp = x;
-//     while (tmp) {
-//       sum += tmp % 10;
-//       tmp = Math.floor(tmp / 10);
-//     }
-//     if (sum > max) max = sum;
-//   }
-
-//   return answer;
-// }
-
-// let arr = [128, 460, 603, 40, 521, 137, 123];
-// console.log(solution(7, arr));
-
-// function solution(arr) {
-//   let answer;
-//   let max = Number.MIN_SAFE_INTEGER;
-//   for (let x of arr) {
-//     let sum;
-//     sum = x
-//       .toString()
-//       .split("")
-//       .reduce((a, b) => a + Number(b), 0);
-//     if (sum > max) {
-//       max = sum;
-//       answer = x;
-//     } else if (sum == max) {
-//       if (answer < x) {
-//         answer = x;
-//       }
-//     }
-//   }
-
-//   return answer;
-// }
-
-// let arr = [128, 460, 603, 40, 521, 137, 123];
-// console.log(solution(arr));
+let a = [1, 3, 5];
+let b = [2, 3, 6, 7, 9];
+console.log(solution(a, b));
