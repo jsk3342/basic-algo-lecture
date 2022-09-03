@@ -2,6 +2,7 @@ const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 
 let input = fs.readFileSync(filePath).toString().split("\n");
+
 input = input.map(Number).map(i => i.toString());
 var arrA = +input[0];
 var arrB = input[1].split("");
@@ -14,6 +15,8 @@ console.log(arrA * one);
 console.log(arrA * ten);
 console.log(arrA * hun);
 console.log(arrA * +input[1]);
+
+472 / 10 
 
 // var 자리수쪼개기 = arrA.map((item, index) => {
 //   if (index === 0) {
