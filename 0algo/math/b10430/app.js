@@ -7,4 +7,10 @@ let input = fs
   .map(i => +i);
 
 console.log("시작 인풋", input);
+const A = input[0]
+const B = input[1]
+const C = input[2]
 
+const arr = [(A+B)%C, ((A%C) + (B%C))%C, (A*B)%C,  ((A%C) * (B%C))%C]
+const arrjo = arr.join("\n")
+console.log(arrjo)
