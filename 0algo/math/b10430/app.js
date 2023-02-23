@@ -4,7 +4,6 @@ let input = fs
   .readFileSync(filePath)
   .toString()
   .split(" ")
-  .map(i => +i);
+  .map((i) => +i);
 
 console.log("시작 인풋", input);
-
