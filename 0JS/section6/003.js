@@ -1,5 +1,23 @@
 function solution(board, moves) {
-  let answer;
+  let answer = 0;
+  const stk = [];
+  const n = board[0].length;
+  for (let t of moves) {
+    for (let i = 0; i < n; i++) {
+      const idx = t - 1;
+      if (board[i][idx] != 0) {
+        console.log(board[i][idx]);
+        if (stk.length != 0 && stk[stk.length - 1] == board[i][idx]) {
+          stk.pop();
+          answer += 2;
+        } else {
+          stk.push(board[i][idx]);
+          board[i][idx] = 0;
+        }
+        break;
+      }
+    }
+  }
 
   return answer;
 }
