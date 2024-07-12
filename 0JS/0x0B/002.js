@@ -15,4 +15,4 @@ function hanoi(n, from, to, via) {
 
 // Example usage:
 const numberOfDisks = 3;
-hanoi(numberOfDisks, 'A', 'C', 'B');
+hanoi(numberOfDisks, "A", "C", "B");
