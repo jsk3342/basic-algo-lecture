@@ -1,3 +1,5 @@
+console.time();
+
 function solution(arr) {
   let answer = 0;
   let maxSum = 0;
@@ -8,7 +10,7 @@ function solution(arr) {
       .map(Number)
       .reduce((a, b) => a + b);
     maxSum = Math.max(sum, maxSum);
-    if (maxSum == sum) {
+    if (maxSum === sum) {
       answer = Math.max(answer, num);
     }
   }
@@ -18,3 +20,5 @@ function solution(arr) {
 
 let arr = [128, 460, 603, 40, 521, 137, 123];
 console.log(solution(arr));
+
+console.timeEnd();
